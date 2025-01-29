@@ -21,7 +21,7 @@ jobs:
           channel: stable
           flutter-version: 3.27.3
       - name: flutter test
-        run: dart run build_runner build  && flutter test --coverage
+        run: dart run build_runner build --delete-conflicting-outputs && flutter test --coverage
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
