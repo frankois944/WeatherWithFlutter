@@ -48,7 +48,7 @@ class WeatherApi {
         final json = jsonDecode(stringData);
         return Success(WeatherApiResponseModel.fromJson(json));
       } else {
-        return Failure(HttpException("Invalid response"));
+        return Failure(const HttpException("Invalid response"));
       }
     } on Exception catch (error) {
       return Failure(error);
