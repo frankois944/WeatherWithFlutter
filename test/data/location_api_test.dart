@@ -2,7 +2,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:weather_with_flutter/data/services/Location/request/location_api_request_model.dart';
 import 'package:weather_with_flutter/data/services/location/location_api.dart';
 
-
 void main() {
   group('Location Api test', () {
     late LocationApi client;
