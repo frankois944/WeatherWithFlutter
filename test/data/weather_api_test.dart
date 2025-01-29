@@ -15,10 +15,10 @@ void main() {
     });
 
     test('should get the weather of Palais-Royal', () async {
-        final request = WeatherApiRequestModel(lat: 48.866667, lon: 2.333333);
-        final result = await client.findWeather(request);
-        expect(true, result.isSuccess);
-        expect('Palais-Royal', result.success.name);
+      final request = WeatherApiRequestModel(lat: 48.866667, lon: 2.333333);
+      final result = await client.findWeather(request);
+      expect(true, result.isSuccess);
+      expect('Palais-Royal', result.success.name);
     });
   });
 }

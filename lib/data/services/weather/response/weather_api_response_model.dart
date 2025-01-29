@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'weather_api_response_model.freezed.dart';
+
 part 'weather_api_response_model.g.dart';
 
 @freezed

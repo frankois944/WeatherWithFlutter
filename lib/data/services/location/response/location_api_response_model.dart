@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 part 'location_api_response_model.freezed.dart';
+
 part 'location_api_response_model.g.dart';
 
 @freezed
