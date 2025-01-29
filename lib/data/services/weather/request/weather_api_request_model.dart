@@ -5,10 +5,11 @@ part 'weather_api_request_model.freezed.dart';
 @freezed
 abstract class WeatherApiRequestModel with _$WeatherApiRequestModel {
   const factory WeatherApiRequestModel({
-    @Default("city")
-    String type,
+    @Default("metric")
+    String unit,
     @Default("en")
     String lang,
-    required String text,
+    required double lat,
+    required double lon
   }) = _WeatherApiRequestModel;
 }

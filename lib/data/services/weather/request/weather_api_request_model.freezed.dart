@@ -16,9 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$WeatherApiRequestModel {
-  String get type => throw _privateConstructorUsedError;
+  String get unit => throw _privateConstructorUsedError;
   String get lang => throw _privateConstructorUsedError;
-  String get text => throw _privateConstructorUsedError;
+  double get lat => throw _privateConstructorUsedError;
+  double get lon => throw _privateConstructorUsedError;
 
   /// Create a copy of WeatherApiRequestModel
   /// with the given fields replaced by the non-null parameter values.
@@ -33,7 +34,7 @@ abstract class $WeatherApiRequestModelCopyWith<$Res> {
           $Res Function(WeatherApiRequestModel) then) =
       _$WeatherApiRequestModelCopyWithImpl<$Res, WeatherApiRequestModel>;
   @useResult
-  $Res call({String type, String lang, String text});
+  $Res call({String unit, String lang, double lat, double lon});
 }
 
 /// @nodoc
@@ -52,23 +53,28 @@ class _$WeatherApiRequestModelCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? unit = null,
     Object? lang = null,
-    Object? text = null,
+    Object? lat = null,
+    Object? lon = null,
   }) {
     return _then(_value.copyWith(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      unit: null == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
               as String,
       lang: null == lang
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
+      lat: null == lat
+          ? _value.lat
+          : lat // ignore: cast_nullable_to_non_nullable
+              as double,
+      lon: null == lon
+          ? _value.lon
+          : lon // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -82,7 +88,7 @@ abstract class _$$WeatherApiRequestModelImplCopyWith<$Res>
       __$$WeatherApiRequestModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String type, String lang, String text});
+  $Res call({String unit, String lang, double lat, double lon});
 }
 
 /// @nodoc
@@ -100,23 +106,28 @@ class __$$WeatherApiRequestModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? unit = null,
     Object? lang = null,
-    Object? text = null,
+    Object? lat = null,
+    Object? lon = null,
   }) {
     return _then(_$WeatherApiRequestModelImpl(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      unit: null == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
               as String,
       lang: null == lang
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
+      lat: null == lat
+          ? _value.lat
+          : lat // ignore: cast_nullable_to_non_nullable
+              as double,
+      lon: null == lon
+          ? _value.lon
+          : lon // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -125,20 +136,25 @@ class __$$WeatherApiRequestModelImplCopyWithImpl<$Res>
 
 class _$WeatherApiRequestModelImpl implements _WeatherApiRequestModel {
   const _$WeatherApiRequestModelImpl(
-      {this.type = "city", this.lang = "en", required this.text});
+      {this.unit = "metric",
+      this.lang = "en",
+      required this.lat,
+      required this.lon});
 
   @override
   @JsonKey()
-  final String type;
+  final String unit;
   @override
   @JsonKey()
   final String lang;
   @override
-  final String text;
+  final double lat;
+  @override
+  final double lon;
 
   @override
   String toString() {
-    return 'WeatherApiRequestModel(type: $type, lang: $lang, text: $text)';
+    return 'WeatherApiRequestModel(unit: $unit, lang: $lang, lat: $lat, lon: $lon)';
   }
 
   @override
@@ -146,13 +162,14 @@ class _$WeatherApiRequestModelImpl implements _WeatherApiRequestModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WeatherApiRequestModelImpl &&
-            (identical(other.type, type) || other.type == type) &&
+            (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.lang, lang) || other.lang == lang) &&
-            (identical(other.text, text) || other.text == text));
+            (identical(other.lat, lat) || other.lat == lat) &&
+            (identical(other.lon, lon) || other.lon == lon));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, type, lang, text);
+  int get hashCode => Object.hash(runtimeType, unit, lang, lat, lon);
 
   /// Create a copy of WeatherApiRequestModel
   /// with the given fields replaced by the non-null parameter values.
@@ -166,16 +183,19 @@ class _$WeatherApiRequestModelImpl implements _WeatherApiRequestModel {
 
 abstract class _WeatherApiRequestModel implements WeatherApiRequestModel {
   const factory _WeatherApiRequestModel(
-      {final String type,
+      {final String unit,
       final String lang,
-      required final String text}) = _$WeatherApiRequestModelImpl;
+      required final double lat,
+      required final double lon}) = _$WeatherApiRequestModelImpl;
 
   @override
-  String get type;
+  String get unit;
   @override
   String get lang;
   @override
-  String get text;
+  double get lat;
+  @override
+  double get lon;
 
   /// Create a copy of WeatherApiRequestModel
   /// with the given fields replaced by the non-null parameter values.

@@ -24,29 +24,28 @@ class WeatherApi {
   final String? _apiKey;
   final HttpClient Function() _clientFactory;
 
-  Future<Result<WeatherApiResponseModel, Exception>> findWeather(
-      WeatherApiRequestModel data) async {
+  Future<Result<WeatherApiResponseModel, Exception>> findWeather(WeatherApiRequestModel data) async {
     final client = _clientFactory();
     try {
       final query = <String, dynamic>{
-        "limit": "10",
-        "apiKey": _apiKey,
-        "type": data.type,
-        "lang": data.lang,
-        "text": data.text,
-        "format": "json"
+        "appid" : _apiKey,
+        "lang" : data.lang,
+        "lat" : data.lat.toString(),
+        "lon" : data.lon.toString(),
+        "units" : data.unit
       };
       final uri = Uri(
-          scheme: _scheme,
-          host: _host,
-          port: _port,
-          path: '/v1/geocode/autocomplete',
-          queryParameters: query);
+        scheme: _scheme,
+        host: _host,
+        port: _port,
+        path: '/data/2.5/weather',
+        queryParameters: query
+      );
       final request = await client.getUrl(uri);
       final response = await request.close();
       if (response.statusCode == 200) {
         final stringData = await response.transform(utf8.decoder).join();
-        final json = jsonDecode(stringData) as dynamic;
+        final json = jsonDecode(stringData);
         return Success(WeatherApiResponseModel.fromJson(json));
       } else {
         return Failure(HttpException("Invalid response"));
@@ -57,4 +56,5 @@ class WeatherApi {
       client.close();
     }
   }
+
 }

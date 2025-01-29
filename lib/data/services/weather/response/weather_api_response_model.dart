@@ -1,12 +1,24 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 part 'weather_api_response_model.freezed.dart';
 part 'weather_api_response_model.g.dart';
 
 @freezed
 class WeatherApiResponseModel with _$WeatherApiResponseModel {
   const factory WeatherApiResponseModel({
-    List<Results>? results,
-    Query? query,
+    Coord? coord,
+    List<Weather>? weather,
+    String? base,
+    Main? main,
+    int? visibility,
+    Wind? wind,
+    Clouds? clouds,
+    int? dt,
+    Sys? sys,
+    int? timezone,
+    int? id,
+    String? name,
+    int? cod,
   }) = _WeatherApiResponseModel;
 
   factory WeatherApiResponseModel.fromJson(Map<String, Object?> json) =>
@@ -14,108 +26,73 @@ class WeatherApiResponseModel with _$WeatherApiResponseModel {
 }
 
 @freezed
-class Results with _$Results {
-  const factory Results({
-    Datasource? datasource,
-    String? oldName,
-    String? country,
-    String? countryCode,
-    String? region,
-    String? state,
-    String? city,
+class Coord with _$Coord {
+  const factory Coord({
     double? lon,
     double? lat,
-    String? stateCode,
-    String? stateCOG,
-    String? resultType,
-    String? formatted,
-    String? addressLine1,
-    String? addressLine2,
-    String? category,
-    Timezone? timezone,
-    String? plusCode,
-    String? plusCodeShort,
-    Rank? rank,
-    String? placeId,
-    Bbox? bbox,
-    String? district,
-    String? suburb,
-    String? postcode,
-  }) = _Results;
+  }) = _Coord;
 
-  factory Results.fromJson(Map<String, Object?> json) =>
-      _$ResultsFromJson(json);
+  factory Coord.fromJson(Map<String, Object?> json) => _$CoordFromJson(json);
 }
 
 @freezed
-class Datasource with _$Datasource {
-  const factory Datasource({
-    String? sourcename,
-    String? attribution,
-    String? license,
-    String? url,
-  }) = _Datasource;
+class Weather with _$Weather {
+  const factory Weather({
+    int? id,
+    String? main,
+    String? description,
+    String? icon,
+  }) = _Weather;
 
-  factory Datasource.fromJson(Map<String, Object?> json) =>
-      _$DatasourceFromJson(json);
+  factory Weather.fromJson(Map<String, Object?> json) =>
+      _$WeatherFromJson(json);
 }
 
 @freezed
-class Timezone with _$Timezone {
-  const factory Timezone({
-    String? name,
-    String? offsetSTD,
-    int? offsetSTDSeconds,
-    String? offsetDST,
-    int? offsetDSTSeconds,
-    String? abbreviationSTD,
-    String? abbreviationDST,
-  }) = _Timezone;
+class Main with _$Main {
+  const factory Main({
+    double? temp,
+    double? feelsLike,
+    double? tempMin,
+    double? tempMax,
+    int? pressure,
+    int? humidity,
+    int? seaLevel,
+    int? grndLevel,
+  }) = _Main;
 
-  factory Timezone.fromJson(Map<String, Object?> json) =>
-      _$TimezoneFromJson(json);
+  factory Main.fromJson(Map<String, Object?> json) => _$MainFromJson(json);
 }
 
 @freezed
-class Rank with _$Rank {
-  const factory Rank({
-    double? importance,
-    int? confidence,
-    int? confidenceCityLevel,
-    String? matchType,
-  }) = _Rank;
+class Wind with _$Wind {
+  const factory Wind({
+    double? speed,
+    int? deg,
+    double? gust,
+  }) = _Wind;
 
-  factory Rank.fromJson(Map<String, Object?> json) => _$RankFromJson(json);
+  factory Wind.fromJson(Map<String, Object?> json) => _$WindFromJson(json);
 }
 
 @freezed
-class Bbox with _$Bbox {
-  const factory Bbox({
-    double? lon1,
-    double? lat1,
-    double? lon2,
-    double? lat2,
-  }) = _Bbox;
+class Clouds with _$Clouds {
+  const factory Clouds({
+    int? all,
+  }) = _Clouds;
 
-  factory Bbox.fromJson(Map<String, Object?> json) => _$BboxFromJson(json);
+  factory Clouds.fromJson(Map<String, Object?> json) => _$CloudsFromJson(json);
 }
 
 @freezed
-class Query with _$Query {
-  const factory Query({
-    String? text,
-    Parsed? parsed,
-  }) = _Query;
+class Sys with _$Sys {
+  const factory Sys({
+    int? type,
+    int? id,
+    String? country,
+    int? sunrise,
+    int? sunset,
+  }) = _Sys;
 
-  factory Query.fromJson(Map<String, Object?> json) => _$QueryFromJson(json);
-}
-
-@freezed
-class Parsed with _$Parsed {
-  const factory Parsed({
-    String? city,
-    String? expectedType,
-  }) = _Parsed;
-
-  factory Parsed.fromJson(Map<String, Object?> json) => _$ParsedFromJson(json);
+  factory Sys.fromJson(Map<String, Object?> json) => _$SysFromJson(json);
 }

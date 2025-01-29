@@ -9,16 +9,16 @@ void main() {
     setUp(() {
       client = WeatherApi(
           scheme: 'https',
-          host: "api.geoapify.com",
+          host: 'api.openweathermap.org',
           port: 443,
-          apiKey: "4fc1d29d06304d7bb03a151484c61032");
+          apiKey: '21348ee62c1f20ff000d533d6e37f011');
     });
 
-    test("shoudl get weather from paris", () async {
-      final request = WeatherApiRequestModel(text: "Paris");
-      final result = await client.findWeather(request);
-      expect(true, result.isSuccess);
-      expect("Paris", result.success.results?.first.city);
+    test('should get the weather of Palais-Royal', () async {
+        final request = WeatherApiRequestModel(lat: 48.866667, lon: 2.333333);
+        final result = await client.findWeather(request);
+        expect(true, result.isSuccess);
+        expect('Palais-Royal', result.success.name);
     });
   });
 }

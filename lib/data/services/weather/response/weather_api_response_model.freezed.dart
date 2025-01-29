@@ -21,8 +21,19 @@ WeatherApiResponseModel _$WeatherApiResponseModelFromJson(
 
 /// @nodoc
 mixin _$WeatherApiResponseModel {
-  List<Results>? get results => throw _privateConstructorUsedError;
-  Query? get query => throw _privateConstructorUsedError;
+  Coord? get coord => throw _privateConstructorUsedError;
+  List<Weather>? get weather => throw _privateConstructorUsedError;
+  String? get base => throw _privateConstructorUsedError;
+  Main? get main => throw _privateConstructorUsedError;
+  int? get visibility => throw _privateConstructorUsedError;
+  Wind? get wind => throw _privateConstructorUsedError;
+  Clouds? get clouds => throw _privateConstructorUsedError;
+  int? get dt => throw _privateConstructorUsedError;
+  Sys? get sys => throw _privateConstructorUsedError;
+  int? get timezone => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  int? get cod => throw _privateConstructorUsedError;
 
   /// Serializes this WeatherApiResponseModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,9 +51,26 @@ abstract class $WeatherApiResponseModelCopyWith<$Res> {
           $Res Function(WeatherApiResponseModel) then) =
       _$WeatherApiResponseModelCopyWithImpl<$Res, WeatherApiResponseModel>;
   @useResult
-  $Res call({List<Results>? results, Query? query});
+  $Res call(
+      {Coord? coord,
+      List<Weather>? weather,
+      String? base,
+      Main? main,
+      int? visibility,
+      Wind? wind,
+      Clouds? clouds,
+      int? dt,
+      Sys? sys,
+      int? timezone,
+      int? id,
+      String? name,
+      int? cod});
 
-  $QueryCopyWith<$Res>? get query;
+  $CoordCopyWith<$Res>? get coord;
+  $MainCopyWith<$Res>? get main;
+  $WindCopyWith<$Res>? get wind;
+  $CloudsCopyWith<$Res>? get clouds;
+  $SysCopyWith<$Res>? get sys;
 }
 
 /// @nodoc
@@ -61,18 +89,73 @@ class _$WeatherApiResponseModelCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
-    Object? query = freezed,
+    Object? coord = freezed,
+    Object? weather = freezed,
+    Object? base = freezed,
+    Object? main = freezed,
+    Object? visibility = freezed,
+    Object? wind = freezed,
+    Object? clouds = freezed,
+    Object? dt = freezed,
+    Object? sys = freezed,
+    Object? timezone = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? cod = freezed,
   }) {
     return _then(_value.copyWith(
-      results: freezed == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>?,
-      query: freezed == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as Query?,
+      coord: freezed == coord
+          ? _value.coord
+          : coord // ignore: cast_nullable_to_non_nullable
+              as Coord?,
+      weather: freezed == weather
+          ? _value.weather
+          : weather // ignore: cast_nullable_to_non_nullable
+              as List<Weather>?,
+      base: freezed == base
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as String?,
+      main: freezed == main
+          ? _value.main
+          : main // ignore: cast_nullable_to_non_nullable
+              as Main?,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as int?,
+      wind: freezed == wind
+          ? _value.wind
+          : wind // ignore: cast_nullable_to_non_nullable
+              as Wind?,
+      clouds: freezed == clouds
+          ? _value.clouds
+          : clouds // ignore: cast_nullable_to_non_nullable
+              as Clouds?,
+      dt: freezed == dt
+          ? _value.dt
+          : dt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sys: freezed == sys
+          ? _value.sys
+          : sys // ignore: cast_nullable_to_non_nullable
+              as Sys?,
+      timezone: freezed == timezone
+          ? _value.timezone
+          : timezone // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cod: freezed == cod
+          ? _value.cod
+          : cod // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 
@@ -80,13 +163,69 @@ class _$WeatherApiResponseModelCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $QueryCopyWith<$Res>? get query {
-    if (_value.query == null) {
+  $CoordCopyWith<$Res>? get coord {
+    if (_value.coord == null) {
       return null;
     }
 
-    return $QueryCopyWith<$Res>(_value.query!, (value) {
-      return _then(_value.copyWith(query: value) as $Val);
+    return $CoordCopyWith<$Res>(_value.coord!, (value) {
+      return _then(_value.copyWith(coord: value) as $Val);
+    });
+  }
+
+  /// Create a copy of WeatherApiResponseModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $MainCopyWith<$Res>? get main {
+    if (_value.main == null) {
+      return null;
+    }
+
+    return $MainCopyWith<$Res>(_value.main!, (value) {
+      return _then(_value.copyWith(main: value) as $Val);
+    });
+  }
+
+  /// Create a copy of WeatherApiResponseModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $WindCopyWith<$Res>? get wind {
+    if (_value.wind == null) {
+      return null;
+    }
+
+    return $WindCopyWith<$Res>(_value.wind!, (value) {
+      return _then(_value.copyWith(wind: value) as $Val);
+    });
+  }
+
+  /// Create a copy of WeatherApiResponseModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudsCopyWith<$Res>? get clouds {
+    if (_value.clouds == null) {
+      return null;
+    }
+
+    return $CloudsCopyWith<$Res>(_value.clouds!, (value) {
+      return _then(_value.copyWith(clouds: value) as $Val);
+    });
+  }
+
+  /// Create a copy of WeatherApiResponseModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SysCopyWith<$Res>? get sys {
+    if (_value.sys == null) {
+      return null;
+    }
+
+    return $SysCopyWith<$Res>(_value.sys!, (value) {
+      return _then(_value.copyWith(sys: value) as $Val);
     });
   }
 }
@@ -100,10 +239,31 @@ abstract class _$$WeatherApiResponseModelImplCopyWith<$Res>
       __$$WeatherApiResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Results>? results, Query? query});
+  $Res call(
+      {Coord? coord,
+      List<Weather>? weather,
+      String? base,
+      Main? main,
+      int? visibility,
+      Wind? wind,
+      Clouds? clouds,
+      int? dt,
+      Sys? sys,
+      int? timezone,
+      int? id,
+      String? name,
+      int? cod});
 
   @override
-  $QueryCopyWith<$Res>? get query;
+  $CoordCopyWith<$Res>? get coord;
+  @override
+  $MainCopyWith<$Res>? get main;
+  @override
+  $WindCopyWith<$Res>? get wind;
+  @override
+  $CloudsCopyWith<$Res>? get clouds;
+  @override
+  $SysCopyWith<$Res>? get sys;
 }
 
 /// @nodoc
@@ -121,18 +281,73 @@ class __$$WeatherApiResponseModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
-    Object? query = freezed,
+    Object? coord = freezed,
+    Object? weather = freezed,
+    Object? base = freezed,
+    Object? main = freezed,
+    Object? visibility = freezed,
+    Object? wind = freezed,
+    Object? clouds = freezed,
+    Object? dt = freezed,
+    Object? sys = freezed,
+    Object? timezone = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? cod = freezed,
   }) {
     return _then(_$WeatherApiResponseModelImpl(
-      results: freezed == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Results>?,
-      query: freezed == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as Query?,
+      coord: freezed == coord
+          ? _value.coord
+          : coord // ignore: cast_nullable_to_non_nullable
+              as Coord?,
+      weather: freezed == weather
+          ? _value._weather
+          : weather // ignore: cast_nullable_to_non_nullable
+              as List<Weather>?,
+      base: freezed == base
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as String?,
+      main: freezed == main
+          ? _value.main
+          : main // ignore: cast_nullable_to_non_nullable
+              as Main?,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as int?,
+      wind: freezed == wind
+          ? _value.wind
+          : wind // ignore: cast_nullable_to_non_nullable
+              as Wind?,
+      clouds: freezed == clouds
+          ? _value.clouds
+          : clouds // ignore: cast_nullable_to_non_nullable
+              as Clouds?,
+      dt: freezed == dt
+          ? _value.dt
+          : dt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sys: freezed == sys
+          ? _value.sys
+          : sys // ignore: cast_nullable_to_non_nullable
+              as Sys?,
+      timezone: freezed == timezone
+          ? _value.timezone
+          : timezone // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cod: freezed == cod
+          ? _value.cod
+          : cod // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -141,28 +356,62 @@ class __$$WeatherApiResponseModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WeatherApiResponseModelImpl implements _WeatherApiResponseModel {
   const _$WeatherApiResponseModelImpl(
-      {final List<Results>? results, this.query})
-      : _results = results;
+      {this.coord,
+      final List<Weather>? weather,
+      this.base,
+      this.main,
+      this.visibility,
+      this.wind,
+      this.clouds,
+      this.dt,
+      this.sys,
+      this.timezone,
+      this.id,
+      this.name,
+      this.cod})
+      : _weather = weather;
 
   factory _$WeatherApiResponseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$WeatherApiResponseModelImplFromJson(json);
 
-  final List<Results>? _results;
   @override
-  List<Results>? get results {
-    final value = _results;
+  final Coord? coord;
+  final List<Weather>? _weather;
+  @override
+  List<Weather>? get weather {
+    final value = _weather;
     if (value == null) return null;
-    if (_results is EqualUnmodifiableListView) return _results;
+    if (_weather is EqualUnmodifiableListView) return _weather;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
   @override
-  final Query? query;
+  final String? base;
+  @override
+  final Main? main;
+  @override
+  final int? visibility;
+  @override
+  final Wind? wind;
+  @override
+  final Clouds? clouds;
+  @override
+  final int? dt;
+  @override
+  final Sys? sys;
+  @override
+  final int? timezone;
+  @override
+  final int? id;
+  @override
+  final String? name;
+  @override
+  final int? cod;
 
   @override
   String toString() {
-    return 'WeatherApiResponseModel(results: $results, query: $query)';
+    return 'WeatherApiResponseModel(coord: $coord, weather: $weather, base: $base, main: $main, visibility: $visibility, wind: $wind, clouds: $clouds, dt: $dt, sys: $sys, timezone: $timezone, id: $id, name: $name, cod: $cod)';
   }
 
   @override
@@ -170,14 +419,40 @@ class _$WeatherApiResponseModelImpl implements _WeatherApiResponseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WeatherApiResponseModelImpl &&
-            const DeepCollectionEquality().equals(other._results, _results) &&
-            (identical(other.query, query) || other.query == query));
+            (identical(other.coord, coord) || other.coord == coord) &&
+            const DeepCollectionEquality().equals(other._weather, _weather) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.main, main) || other.main == main) &&
+            (identical(other.visibility, visibility) ||
+                other.visibility == visibility) &&
+            (identical(other.wind, wind) || other.wind == wind) &&
+            (identical(other.clouds, clouds) || other.clouds == clouds) &&
+            (identical(other.dt, dt) || other.dt == dt) &&
+            (identical(other.sys, sys) || other.sys == sys) &&
+            (identical(other.timezone, timezone) ||
+                other.timezone == timezone) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.cod, cod) || other.cod == cod));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_results), query);
+      runtimeType,
+      coord,
+      const DeepCollectionEquality().hash(_weather),
+      base,
+      main,
+      visibility,
+      wind,
+      clouds,
+      dt,
+      sys,
+      timezone,
+      id,
+      name,
+      cod);
 
   /// Create a copy of WeatherApiResponseModel
   /// with the given fields replaced by the non-null parameter values.
@@ -198,16 +473,49 @@ class _$WeatherApiResponseModelImpl implements _WeatherApiResponseModel {
 
 abstract class _WeatherApiResponseModel implements WeatherApiResponseModel {
   const factory _WeatherApiResponseModel(
-      {final List<Results>? results,
-      final Query? query}) = _$WeatherApiResponseModelImpl;
+      {final Coord? coord,
+      final List<Weather>? weather,
+      final String? base,
+      final Main? main,
+      final int? visibility,
+      final Wind? wind,
+      final Clouds? clouds,
+      final int? dt,
+      final Sys? sys,
+      final int? timezone,
+      final int? id,
+      final String? name,
+      final int? cod}) = _$WeatherApiResponseModelImpl;
 
   factory _WeatherApiResponseModel.fromJson(Map<String, dynamic> json) =
       _$WeatherApiResponseModelImpl.fromJson;
 
   @override
-  List<Results>? get results;
+  Coord? get coord;
   @override
-  Query? get query;
+  List<Weather>? get weather;
+  @override
+  String? get base;
+  @override
+  Main? get main;
+  @override
+  int? get visibility;
+  @override
+  Wind? get wind;
+  @override
+  Clouds? get clouds;
+  @override
+  int? get dt;
+  @override
+  Sys? get sys;
+  @override
+  int? get timezone;
+  @override
+  int? get id;
+  @override
+  String? get name;
+  @override
+  int? get cod;
 
   /// Create a copy of WeatherApiResponseModel
   /// with the given fields replaced by the non-null parameter values.
@@ -217,155 +525,51 @@ abstract class _WeatherApiResponseModel implements WeatherApiResponseModel {
       get copyWith => throw _privateConstructorUsedError;
 }
 
-Results _$ResultsFromJson(Map<String, dynamic> json) {
-  return _Results.fromJson(json);
+Coord _$CoordFromJson(Map<String, dynamic> json) {
+  return _Coord.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Results {
-  Datasource? get datasource => throw _privateConstructorUsedError;
-  String? get oldName => throw _privateConstructorUsedError;
-  String? get country => throw _privateConstructorUsedError;
-  String? get countryCode => throw _privateConstructorUsedError;
-  String? get region => throw _privateConstructorUsedError;
-  String? get state => throw _privateConstructorUsedError;
-  String? get city => throw _privateConstructorUsedError;
+mixin _$Coord {
   double? get lon => throw _privateConstructorUsedError;
   double? get lat => throw _privateConstructorUsedError;
-  String? get stateCode => throw _privateConstructorUsedError;
-  String? get stateCOG => throw _privateConstructorUsedError;
-  String? get resultType => throw _privateConstructorUsedError;
-  String? get formatted => throw _privateConstructorUsedError;
-  String? get addressLine1 => throw _privateConstructorUsedError;
-  String? get addressLine2 => throw _privateConstructorUsedError;
-  String? get category => throw _privateConstructorUsedError;
-  Timezone? get timezone => throw _privateConstructorUsedError;
-  String? get plusCode => throw _privateConstructorUsedError;
-  String? get plusCodeShort => throw _privateConstructorUsedError;
-  Rank? get rank => throw _privateConstructorUsedError;
-  String? get placeId => throw _privateConstructorUsedError;
-  Bbox? get bbox => throw _privateConstructorUsedError;
-  String? get district => throw _privateConstructorUsedError;
-  String? get suburb => throw _privateConstructorUsedError;
-  String? get postcode => throw _privateConstructorUsedError;
 
-  /// Serializes this Results to a JSON map.
+  /// Serializes this Coord to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of Results
+  /// Create a copy of Coord
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResultsCopyWith<Results> get copyWith => throw _privateConstructorUsedError;
+  $CoordCopyWith<Coord> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ResultsCopyWith<$Res> {
-  factory $ResultsCopyWith(Results value, $Res Function(Results) then) =
-      _$ResultsCopyWithImpl<$Res, Results>;
+abstract class $CoordCopyWith<$Res> {
+  factory $CoordCopyWith(Coord value, $Res Function(Coord) then) =
+      _$CoordCopyWithImpl<$Res, Coord>;
   @useResult
-  $Res call(
-      {Datasource? datasource,
-      String? oldName,
-      String? country,
-      String? countryCode,
-      String? region,
-      String? state,
-      String? city,
-      double? lon,
-      double? lat,
-      String? stateCode,
-      String? stateCOG,
-      String? resultType,
-      String? formatted,
-      String? addressLine1,
-      String? addressLine2,
-      String? category,
-      Timezone? timezone,
-      String? plusCode,
-      String? plusCodeShort,
-      Rank? rank,
-      String? placeId,
-      Bbox? bbox,
-      String? district,
-      String? suburb,
-      String? postcode});
-
-  $DatasourceCopyWith<$Res>? get datasource;
-  $TimezoneCopyWith<$Res>? get timezone;
-  $RankCopyWith<$Res>? get rank;
-  $BboxCopyWith<$Res>? get bbox;
+  $Res call({double? lon, double? lat});
 }
 
 /// @nodoc
-class _$ResultsCopyWithImpl<$Res, $Val extends Results>
-    implements $ResultsCopyWith<$Res> {
-  _$ResultsCopyWithImpl(this._value, this._then);
+class _$CoordCopyWithImpl<$Res, $Val extends Coord>
+    implements $CoordCopyWith<$Res> {
+  _$CoordCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Results
+  /// Create a copy of Coord
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? datasource = freezed,
-    Object? oldName = freezed,
-    Object? country = freezed,
-    Object? countryCode = freezed,
-    Object? region = freezed,
-    Object? state = freezed,
-    Object? city = freezed,
     Object? lon = freezed,
     Object? lat = freezed,
-    Object? stateCode = freezed,
-    Object? stateCOG = freezed,
-    Object? resultType = freezed,
-    Object? formatted = freezed,
-    Object? addressLine1 = freezed,
-    Object? addressLine2 = freezed,
-    Object? category = freezed,
-    Object? timezone = freezed,
-    Object? plusCode = freezed,
-    Object? plusCodeShort = freezed,
-    Object? rank = freezed,
-    Object? placeId = freezed,
-    Object? bbox = freezed,
-    Object? district = freezed,
-    Object? suburb = freezed,
-    Object? postcode = freezed,
   }) {
     return _then(_value.copyWith(
-      datasource: freezed == datasource
-          ? _value.datasource
-          : datasource // ignore: cast_nullable_to_non_nullable
-              as Datasource?,
-      oldName: freezed == oldName
-          ? _value.oldName
-          : oldName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      country: freezed == country
-          ? _value.country
-          : country // ignore: cast_nullable_to_non_nullable
-              as String?,
-      countryCode: freezed == countryCode
-          ? _value.countryCode
-          : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      region: freezed == region
-          ? _value.region
-          : region // ignore: cast_nullable_to_non_nullable
-              as String?,
-      state: freezed == state
-          ? _value.state
-          : state // ignore: cast_nullable_to_non_nullable
-              as String?,
-      city: freezed == city
-          ? _value.city
-          : city // ignore: cast_nullable_to_non_nullable
-              as String?,
       lon: freezed == lon
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
@@ -374,242 +578,37 @@ class _$ResultsCopyWithImpl<$Res, $Val extends Results>
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as double?,
-      stateCode: freezed == stateCode
-          ? _value.stateCode
-          : stateCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      stateCOG: freezed == stateCOG
-          ? _value.stateCOG
-          : stateCOG // ignore: cast_nullable_to_non_nullable
-              as String?,
-      resultType: freezed == resultType
-          ? _value.resultType
-          : resultType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      formatted: freezed == formatted
-          ? _value.formatted
-          : formatted // ignore: cast_nullable_to_non_nullable
-              as String?,
-      addressLine1: freezed == addressLine1
-          ? _value.addressLine1
-          : addressLine1 // ignore: cast_nullable_to_non_nullable
-              as String?,
-      addressLine2: freezed == addressLine2
-          ? _value.addressLine2
-          : addressLine2 // ignore: cast_nullable_to_non_nullable
-              as String?,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String?,
-      timezone: freezed == timezone
-          ? _value.timezone
-          : timezone // ignore: cast_nullable_to_non_nullable
-              as Timezone?,
-      plusCode: freezed == plusCode
-          ? _value.plusCode
-          : plusCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plusCodeShort: freezed == plusCodeShort
-          ? _value.plusCodeShort
-          : plusCodeShort // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rank: freezed == rank
-          ? _value.rank
-          : rank // ignore: cast_nullable_to_non_nullable
-              as Rank?,
-      placeId: freezed == placeId
-          ? _value.placeId
-          : placeId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bbox: freezed == bbox
-          ? _value.bbox
-          : bbox // ignore: cast_nullable_to_non_nullable
-              as Bbox?,
-      district: freezed == district
-          ? _value.district
-          : district // ignore: cast_nullable_to_non_nullable
-              as String?,
-      suburb: freezed == suburb
-          ? _value.suburb
-          : suburb // ignore: cast_nullable_to_non_nullable
-              as String?,
-      postcode: freezed == postcode
-          ? _value.postcode
-          : postcode // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
-
-  /// Create a copy of Results
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $DatasourceCopyWith<$Res>? get datasource {
-    if (_value.datasource == null) {
-      return null;
-    }
-
-    return $DatasourceCopyWith<$Res>(_value.datasource!, (value) {
-      return _then(_value.copyWith(datasource: value) as $Val);
-    });
-  }
-
-  /// Create a copy of Results
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TimezoneCopyWith<$Res>? get timezone {
-    if (_value.timezone == null) {
-      return null;
-    }
-
-    return $TimezoneCopyWith<$Res>(_value.timezone!, (value) {
-      return _then(_value.copyWith(timezone: value) as $Val);
-    });
-  }
-
-  /// Create a copy of Results
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $RankCopyWith<$Res>? get rank {
-    if (_value.rank == null) {
-      return null;
-    }
-
-    return $RankCopyWith<$Res>(_value.rank!, (value) {
-      return _then(_value.copyWith(rank: value) as $Val);
-    });
-  }
-
-  /// Create a copy of Results
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $BboxCopyWith<$Res>? get bbox {
-    if (_value.bbox == null) {
-      return null;
-    }
-
-    return $BboxCopyWith<$Res>(_value.bbox!, (value) {
-      return _then(_value.copyWith(bbox: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
-abstract class _$$ResultsImplCopyWith<$Res> implements $ResultsCopyWith<$Res> {
-  factory _$$ResultsImplCopyWith(
-          _$ResultsImpl value, $Res Function(_$ResultsImpl) then) =
-      __$$ResultsImplCopyWithImpl<$Res>;
+abstract class _$$CoordImplCopyWith<$Res> implements $CoordCopyWith<$Res> {
+  factory _$$CoordImplCopyWith(
+          _$CoordImpl value, $Res Function(_$CoordImpl) then) =
+      __$$CoordImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {Datasource? datasource,
-      String? oldName,
-      String? country,
-      String? countryCode,
-      String? region,
-      String? state,
-      String? city,
-      double? lon,
-      double? lat,
-      String? stateCode,
-      String? stateCOG,
-      String? resultType,
-      String? formatted,
-      String? addressLine1,
-      String? addressLine2,
-      String? category,
-      Timezone? timezone,
-      String? plusCode,
-      String? plusCodeShort,
-      Rank? rank,
-      String? placeId,
-      Bbox? bbox,
-      String? district,
-      String? suburb,
-      String? postcode});
-
-  @override
-  $DatasourceCopyWith<$Res>? get datasource;
-  @override
-  $TimezoneCopyWith<$Res>? get timezone;
-  @override
-  $RankCopyWith<$Res>? get rank;
-  @override
-  $BboxCopyWith<$Res>? get bbox;
+  $Res call({double? lon, double? lat});
 }
 
 /// @nodoc
-class __$$ResultsImplCopyWithImpl<$Res>
-    extends _$ResultsCopyWithImpl<$Res, _$ResultsImpl>
-    implements _$$ResultsImplCopyWith<$Res> {
-  __$$ResultsImplCopyWithImpl(
-      _$ResultsImpl _value, $Res Function(_$ResultsImpl) _then)
+class __$$CoordImplCopyWithImpl<$Res>
+    extends _$CoordCopyWithImpl<$Res, _$CoordImpl>
+    implements _$$CoordImplCopyWith<$Res> {
+  __$$CoordImplCopyWithImpl(
+      _$CoordImpl _value, $Res Function(_$CoordImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Results
+  /// Create a copy of Coord
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? datasource = freezed,
-    Object? oldName = freezed,
-    Object? country = freezed,
-    Object? countryCode = freezed,
-    Object? region = freezed,
-    Object? state = freezed,
-    Object? city = freezed,
     Object? lon = freezed,
     Object? lat = freezed,
-    Object? stateCode = freezed,
-    Object? stateCOG = freezed,
-    Object? resultType = freezed,
-    Object? formatted = freezed,
-    Object? addressLine1 = freezed,
-    Object? addressLine2 = freezed,
-    Object? category = freezed,
-    Object? timezone = freezed,
-    Object? plusCode = freezed,
-    Object? plusCodeShort = freezed,
-    Object? rank = freezed,
-    Object? placeId = freezed,
-    Object? bbox = freezed,
-    Object? district = freezed,
-    Object? suburb = freezed,
-    Object? postcode = freezed,
   }) {
-    return _then(_$ResultsImpl(
-      datasource: freezed == datasource
-          ? _value.datasource
-          : datasource // ignore: cast_nullable_to_non_nullable
-              as Datasource?,
-      oldName: freezed == oldName
-          ? _value.oldName
-          : oldName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      country: freezed == country
-          ? _value.country
-          : country // ignore: cast_nullable_to_non_nullable
-              as String?,
-      countryCode: freezed == countryCode
-          ? _value.countryCode
-          : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      region: freezed == region
-          ? _value.region
-          : region // ignore: cast_nullable_to_non_nullable
-              as String?,
-      state: freezed == state
-          ? _value.state
-          : state // ignore: cast_nullable_to_non_nullable
-              as String?,
-      city: freezed == city
-          ? _value.city
-          : city // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_$CoordImpl(
       lon: freezed == lon
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
@@ -618,463 +617,188 @@ class __$$ResultsImplCopyWithImpl<$Res>
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as double?,
-      stateCode: freezed == stateCode
-          ? _value.stateCode
-          : stateCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      stateCOG: freezed == stateCOG
-          ? _value.stateCOG
-          : stateCOG // ignore: cast_nullable_to_non_nullable
-              as String?,
-      resultType: freezed == resultType
-          ? _value.resultType
-          : resultType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      formatted: freezed == formatted
-          ? _value.formatted
-          : formatted // ignore: cast_nullable_to_non_nullable
-              as String?,
-      addressLine1: freezed == addressLine1
-          ? _value.addressLine1
-          : addressLine1 // ignore: cast_nullable_to_non_nullable
-              as String?,
-      addressLine2: freezed == addressLine2
-          ? _value.addressLine2
-          : addressLine2 // ignore: cast_nullable_to_non_nullable
-              as String?,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String?,
-      timezone: freezed == timezone
-          ? _value.timezone
-          : timezone // ignore: cast_nullable_to_non_nullable
-              as Timezone?,
-      plusCode: freezed == plusCode
-          ? _value.plusCode
-          : plusCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plusCodeShort: freezed == plusCodeShort
-          ? _value.plusCodeShort
-          : plusCodeShort // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rank: freezed == rank
-          ? _value.rank
-          : rank // ignore: cast_nullable_to_non_nullable
-              as Rank?,
-      placeId: freezed == placeId
-          ? _value.placeId
-          : placeId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bbox: freezed == bbox
-          ? _value.bbox
-          : bbox // ignore: cast_nullable_to_non_nullable
-              as Bbox?,
-      district: freezed == district
-          ? _value.district
-          : district // ignore: cast_nullable_to_non_nullable
-              as String?,
-      suburb: freezed == suburb
-          ? _value.suburb
-          : suburb // ignore: cast_nullable_to_non_nullable
-              as String?,
-      postcode: freezed == postcode
-          ? _value.postcode
-          : postcode // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ResultsImpl implements _Results {
-  const _$ResultsImpl(
-      {this.datasource,
-      this.oldName,
-      this.country,
-      this.countryCode,
-      this.region,
-      this.state,
-      this.city,
-      this.lon,
-      this.lat,
-      this.stateCode,
-      this.stateCOG,
-      this.resultType,
-      this.formatted,
-      this.addressLine1,
-      this.addressLine2,
-      this.category,
-      this.timezone,
-      this.plusCode,
-      this.plusCodeShort,
-      this.rank,
-      this.placeId,
-      this.bbox,
-      this.district,
-      this.suburb,
-      this.postcode});
+class _$CoordImpl implements _Coord {
+  const _$CoordImpl({this.lon, this.lat});
 
-  factory _$ResultsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResultsImplFromJson(json);
+  factory _$CoordImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoordImplFromJson(json);
 
-  @override
-  final Datasource? datasource;
-  @override
-  final String? oldName;
-  @override
-  final String? country;
-  @override
-  final String? countryCode;
-  @override
-  final String? region;
-  @override
-  final String? state;
-  @override
-  final String? city;
   @override
   final double? lon;
   @override
   final double? lat;
-  @override
-  final String? stateCode;
-  @override
-  final String? stateCOG;
-  @override
-  final String? resultType;
-  @override
-  final String? formatted;
-  @override
-  final String? addressLine1;
-  @override
-  final String? addressLine2;
-  @override
-  final String? category;
-  @override
-  final Timezone? timezone;
-  @override
-  final String? plusCode;
-  @override
-  final String? plusCodeShort;
-  @override
-  final Rank? rank;
-  @override
-  final String? placeId;
-  @override
-  final Bbox? bbox;
-  @override
-  final String? district;
-  @override
-  final String? suburb;
-  @override
-  final String? postcode;
 
   @override
   String toString() {
-    return 'Results(datasource: $datasource, oldName: $oldName, country: $country, countryCode: $countryCode, region: $region, state: $state, city: $city, lon: $lon, lat: $lat, stateCode: $stateCode, stateCOG: $stateCOG, resultType: $resultType, formatted: $formatted, addressLine1: $addressLine1, addressLine2: $addressLine2, category: $category, timezone: $timezone, plusCode: $plusCode, plusCodeShort: $plusCodeShort, rank: $rank, placeId: $placeId, bbox: $bbox, district: $district, suburb: $suburb, postcode: $postcode)';
+    return 'Coord(lon: $lon, lat: $lat)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResultsImpl &&
-            (identical(other.datasource, datasource) ||
-                other.datasource == datasource) &&
-            (identical(other.oldName, oldName) || other.oldName == oldName) &&
-            (identical(other.country, country) || other.country == country) &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
-            (identical(other.region, region) || other.region == region) &&
-            (identical(other.state, state) || other.state == state) &&
-            (identical(other.city, city) || other.city == city) &&
+            other is _$CoordImpl &&
             (identical(other.lon, lon) || other.lon == lon) &&
-            (identical(other.lat, lat) || other.lat == lat) &&
-            (identical(other.stateCode, stateCode) ||
-                other.stateCode == stateCode) &&
-            (identical(other.stateCOG, stateCOG) ||
-                other.stateCOG == stateCOG) &&
-            (identical(other.resultType, resultType) ||
-                other.resultType == resultType) &&
-            (identical(other.formatted, formatted) ||
-                other.formatted == formatted) &&
-            (identical(other.addressLine1, addressLine1) ||
-                other.addressLine1 == addressLine1) &&
-            (identical(other.addressLine2, addressLine2) ||
-                other.addressLine2 == addressLine2) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
-            (identical(other.timezone, timezone) ||
-                other.timezone == timezone) &&
-            (identical(other.plusCode, plusCode) ||
-                other.plusCode == plusCode) &&
-            (identical(other.plusCodeShort, plusCodeShort) ||
-                other.plusCodeShort == plusCodeShort) &&
-            (identical(other.rank, rank) || other.rank == rank) &&
-            (identical(other.placeId, placeId) || other.placeId == placeId) &&
-            (identical(other.bbox, bbox) || other.bbox == bbox) &&
-            (identical(other.district, district) ||
-                other.district == district) &&
-            (identical(other.suburb, suburb) || other.suburb == suburb) &&
-            (identical(other.postcode, postcode) ||
-                other.postcode == postcode));
+            (identical(other.lat, lat) || other.lat == lat));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        datasource,
-        oldName,
-        country,
-        countryCode,
-        region,
-        state,
-        city,
-        lon,
-        lat,
-        stateCode,
-        stateCOG,
-        resultType,
-        formatted,
-        addressLine1,
-        addressLine2,
-        category,
-        timezone,
-        plusCode,
-        plusCodeShort,
-        rank,
-        placeId,
-        bbox,
-        district,
-        suburb,
-        postcode
-      ]);
+  int get hashCode => Object.hash(runtimeType, lon, lat);
 
-  /// Create a copy of Results
+  /// Create a copy of Coord
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResultsImplCopyWith<_$ResultsImpl> get copyWith =>
-      __$$ResultsImplCopyWithImpl<_$ResultsImpl>(this, _$identity);
+  _$$CoordImplCopyWith<_$CoordImpl> get copyWith =>
+      __$$CoordImplCopyWithImpl<_$CoordImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResultsImplToJson(
+    return _$$CoordImplToJson(
       this,
     );
   }
 }
 
-abstract class _Results implements Results {
-  const factory _Results(
-      {final Datasource? datasource,
-      final String? oldName,
-      final String? country,
-      final String? countryCode,
-      final String? region,
-      final String? state,
-      final String? city,
-      final double? lon,
-      final double? lat,
-      final String? stateCode,
-      final String? stateCOG,
-      final String? resultType,
-      final String? formatted,
-      final String? addressLine1,
-      final String? addressLine2,
-      final String? category,
-      final Timezone? timezone,
-      final String? plusCode,
-      final String? plusCodeShort,
-      final Rank? rank,
-      final String? placeId,
-      final Bbox? bbox,
-      final String? district,
-      final String? suburb,
-      final String? postcode}) = _$ResultsImpl;
+abstract class _Coord implements Coord {
+  const factory _Coord({final double? lon, final double? lat}) = _$CoordImpl;
 
-  factory _Results.fromJson(Map<String, dynamic> json) = _$ResultsImpl.fromJson;
+  factory _Coord.fromJson(Map<String, dynamic> json) = _$CoordImpl.fromJson;
 
-  @override
-  Datasource? get datasource;
-  @override
-  String? get oldName;
-  @override
-  String? get country;
-  @override
-  String? get countryCode;
-  @override
-  String? get region;
-  @override
-  String? get state;
-  @override
-  String? get city;
   @override
   double? get lon;
   @override
   double? get lat;
-  @override
-  String? get stateCode;
-  @override
-  String? get stateCOG;
-  @override
-  String? get resultType;
-  @override
-  String? get formatted;
-  @override
-  String? get addressLine1;
-  @override
-  String? get addressLine2;
-  @override
-  String? get category;
-  @override
-  Timezone? get timezone;
-  @override
-  String? get plusCode;
-  @override
-  String? get plusCodeShort;
-  @override
-  Rank? get rank;
-  @override
-  String? get placeId;
-  @override
-  Bbox? get bbox;
-  @override
-  String? get district;
-  @override
-  String? get suburb;
-  @override
-  String? get postcode;
 
-  /// Create a copy of Results
+  /// Create a copy of Coord
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResultsImplCopyWith<_$ResultsImpl> get copyWith =>
+  _$$CoordImplCopyWith<_$CoordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-Datasource _$DatasourceFromJson(Map<String, dynamic> json) {
-  return _Datasource.fromJson(json);
+Weather _$WeatherFromJson(Map<String, dynamic> json) {
+  return _Weather.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Datasource {
-  String? get sourcename => throw _privateConstructorUsedError;
-  String? get attribution => throw _privateConstructorUsedError;
-  String? get license => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
+mixin _$Weather {
+  int? get id => throw _privateConstructorUsedError;
+  String? get main => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
 
-  /// Serializes this Datasource to a JSON map.
+  /// Serializes this Weather to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of Datasource
+  /// Create a copy of Weather
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DatasourceCopyWith<Datasource> get copyWith =>
-      throw _privateConstructorUsedError;
+  $WeatherCopyWith<Weather> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DatasourceCopyWith<$Res> {
-  factory $DatasourceCopyWith(
-          Datasource value, $Res Function(Datasource) then) =
-      _$DatasourceCopyWithImpl<$Res, Datasource>;
+abstract class $WeatherCopyWith<$Res> {
+  factory $WeatherCopyWith(Weather value, $Res Function(Weather) then) =
+      _$WeatherCopyWithImpl<$Res, Weather>;
   @useResult
-  $Res call(
-      {String? sourcename, String? attribution, String? license, String? url});
+  $Res call({int? id, String? main, String? description, String? icon});
 }
 
 /// @nodoc
-class _$DatasourceCopyWithImpl<$Res, $Val extends Datasource>
-    implements $DatasourceCopyWith<$Res> {
-  _$DatasourceCopyWithImpl(this._value, this._then);
+class _$WeatherCopyWithImpl<$Res, $Val extends Weather>
+    implements $WeatherCopyWith<$Res> {
+  _$WeatherCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Datasource
+  /// Create a copy of Weather
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sourcename = freezed,
-    Object? attribution = freezed,
-    Object? license = freezed,
-    Object? url = freezed,
+    Object? id = freezed,
+    Object? main = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
-      sourcename: freezed == sourcename
-          ? _value.sourcename
-          : sourcename // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      main: freezed == main
+          ? _value.main
+          : main // ignore: cast_nullable_to_non_nullable
               as String?,
-      attribution: freezed == attribution
-          ? _value.attribution
-          : attribution // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      license: freezed == license
-          ? _value.license
-          : license // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$DatasourceImplCopyWith<$Res>
-    implements $DatasourceCopyWith<$Res> {
-  factory _$$DatasourceImplCopyWith(
-          _$DatasourceImpl value, $Res Function(_$DatasourceImpl) then) =
-      __$$DatasourceImplCopyWithImpl<$Res>;
+abstract class _$$WeatherImplCopyWith<$Res> implements $WeatherCopyWith<$Res> {
+  factory _$$WeatherImplCopyWith(
+          _$WeatherImpl value, $Res Function(_$WeatherImpl) then) =
+      __$$WeatherImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? sourcename, String? attribution, String? license, String? url});
+  $Res call({int? id, String? main, String? description, String? icon});
 }
 
 /// @nodoc
-class __$$DatasourceImplCopyWithImpl<$Res>
-    extends _$DatasourceCopyWithImpl<$Res, _$DatasourceImpl>
-    implements _$$DatasourceImplCopyWith<$Res> {
-  __$$DatasourceImplCopyWithImpl(
-      _$DatasourceImpl _value, $Res Function(_$DatasourceImpl) _then)
+class __$$WeatherImplCopyWithImpl<$Res>
+    extends _$WeatherCopyWithImpl<$Res, _$WeatherImpl>
+    implements _$$WeatherImplCopyWith<$Res> {
+  __$$WeatherImplCopyWithImpl(
+      _$WeatherImpl _value, $Res Function(_$WeatherImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Datasource
+  /// Create a copy of Weather
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sourcename = freezed,
-    Object? attribution = freezed,
-    Object? license = freezed,
-    Object? url = freezed,
+    Object? id = freezed,
+    Object? main = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
   }) {
-    return _then(_$DatasourceImpl(
-      sourcename: freezed == sourcename
-          ? _value.sourcename
-          : sourcename // ignore: cast_nullable_to_non_nullable
+    return _then(_$WeatherImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      main: freezed == main
+          ? _value.main
+          : main // ignore: cast_nullable_to_non_nullable
               as String?,
-      attribution: freezed == attribution
-          ? _value.attribution
-          : attribution // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      license: freezed == license
-          ? _value.license
-          : license // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -1082,1123 +806,908 @@ class __$$DatasourceImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$DatasourceImpl implements _Datasource {
-  const _$DatasourceImpl(
-      {this.sourcename, this.attribution, this.license, this.url});
+class _$WeatherImpl implements _Weather {
+  const _$WeatherImpl({this.id, this.main, this.description, this.icon});
 
-  factory _$DatasourceImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DatasourceImplFromJson(json);
+  factory _$WeatherImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WeatherImplFromJson(json);
 
   @override
-  final String? sourcename;
+  final int? id;
   @override
-  final String? attribution;
+  final String? main;
   @override
-  final String? license;
+  final String? description;
   @override
-  final String? url;
+  final String? icon;
 
   @override
   String toString() {
-    return 'Datasource(sourcename: $sourcename, attribution: $attribution, license: $license, url: $url)';
+    return 'Weather(id: $id, main: $main, description: $description, icon: $icon)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DatasourceImpl &&
-            (identical(other.sourcename, sourcename) ||
-                other.sourcename == sourcename) &&
-            (identical(other.attribution, attribution) ||
-                other.attribution == attribution) &&
-            (identical(other.license, license) || other.license == license) &&
-            (identical(other.url, url) || other.url == url));
+            other is _$WeatherImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.main, main) || other.main == main) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, main, description, icon);
+
+  /// Create a copy of Weather
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WeatherImplCopyWith<_$WeatherImpl> get copyWith =>
+      __$$WeatherImplCopyWithImpl<_$WeatherImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WeatherImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Weather implements Weather {
+  const factory _Weather(
+      {final int? id,
+      final String? main,
+      final String? description,
+      final String? icon}) = _$WeatherImpl;
+
+  factory _Weather.fromJson(Map<String, dynamic> json) = _$WeatherImpl.fromJson;
+
+  @override
+  int? get id;
+  @override
+  String? get main;
+  @override
+  String? get description;
+  @override
+  String? get icon;
+
+  /// Create a copy of Weather
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$WeatherImplCopyWith<_$WeatherImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Main _$MainFromJson(Map<String, dynamic> json) {
+  return _Main.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Main {
+  double? get temp => throw _privateConstructorUsedError;
+  double? get feelsLike => throw _privateConstructorUsedError;
+  double? get tempMin => throw _privateConstructorUsedError;
+  double? get tempMax => throw _privateConstructorUsedError;
+  int? get pressure => throw _privateConstructorUsedError;
+  int? get humidity => throw _privateConstructorUsedError;
+  int? get seaLevel => throw _privateConstructorUsedError;
+  int? get grndLevel => throw _privateConstructorUsedError;
+
+  /// Serializes this Main to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Main
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MainCopyWith<Main> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MainCopyWith<$Res> {
+  factory $MainCopyWith(Main value, $Res Function(Main) then) =
+      _$MainCopyWithImpl<$Res, Main>;
+  @useResult
+  $Res call(
+      {double? temp,
+      double? feelsLike,
+      double? tempMin,
+      double? tempMax,
+      int? pressure,
+      int? humidity,
+      int? seaLevel,
+      int? grndLevel});
+}
+
+/// @nodoc
+class _$MainCopyWithImpl<$Res, $Val extends Main>
+    implements $MainCopyWith<$Res> {
+  _$MainCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Main
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? temp = freezed,
+    Object? feelsLike = freezed,
+    Object? tempMin = freezed,
+    Object? tempMax = freezed,
+    Object? pressure = freezed,
+    Object? humidity = freezed,
+    Object? seaLevel = freezed,
+    Object? grndLevel = freezed,
+  }) {
+    return _then(_value.copyWith(
+      temp: freezed == temp
+          ? _value.temp
+          : temp // ignore: cast_nullable_to_non_nullable
+              as double?,
+      feelsLike: freezed == feelsLike
+          ? _value.feelsLike
+          : feelsLike // ignore: cast_nullable_to_non_nullable
+              as double?,
+      tempMin: freezed == tempMin
+          ? _value.tempMin
+          : tempMin // ignore: cast_nullable_to_non_nullable
+              as double?,
+      tempMax: freezed == tempMax
+          ? _value.tempMax
+          : tempMax // ignore: cast_nullable_to_non_nullable
+              as double?,
+      pressure: freezed == pressure
+          ? _value.pressure
+          : pressure // ignore: cast_nullable_to_non_nullable
+              as int?,
+      humidity: freezed == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as int?,
+      seaLevel: freezed == seaLevel
+          ? _value.seaLevel
+          : seaLevel // ignore: cast_nullable_to_non_nullable
+              as int?,
+      grndLevel: freezed == grndLevel
+          ? _value.grndLevel
+          : grndLevel // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MainImplCopyWith<$Res> implements $MainCopyWith<$Res> {
+  factory _$$MainImplCopyWith(
+          _$MainImpl value, $Res Function(_$MainImpl) then) =
+      __$$MainImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {double? temp,
+      double? feelsLike,
+      double? tempMin,
+      double? tempMax,
+      int? pressure,
+      int? humidity,
+      int? seaLevel,
+      int? grndLevel});
+}
+
+/// @nodoc
+class __$$MainImplCopyWithImpl<$Res>
+    extends _$MainCopyWithImpl<$Res, _$MainImpl>
+    implements _$$MainImplCopyWith<$Res> {
+  __$$MainImplCopyWithImpl(_$MainImpl _value, $Res Function(_$MainImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Main
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? temp = freezed,
+    Object? feelsLike = freezed,
+    Object? tempMin = freezed,
+    Object? tempMax = freezed,
+    Object? pressure = freezed,
+    Object? humidity = freezed,
+    Object? seaLevel = freezed,
+    Object? grndLevel = freezed,
+  }) {
+    return _then(_$MainImpl(
+      temp: freezed == temp
+          ? _value.temp
+          : temp // ignore: cast_nullable_to_non_nullable
+              as double?,
+      feelsLike: freezed == feelsLike
+          ? _value.feelsLike
+          : feelsLike // ignore: cast_nullable_to_non_nullable
+              as double?,
+      tempMin: freezed == tempMin
+          ? _value.tempMin
+          : tempMin // ignore: cast_nullable_to_non_nullable
+              as double?,
+      tempMax: freezed == tempMax
+          ? _value.tempMax
+          : tempMax // ignore: cast_nullable_to_non_nullable
+              as double?,
+      pressure: freezed == pressure
+          ? _value.pressure
+          : pressure // ignore: cast_nullable_to_non_nullable
+              as int?,
+      humidity: freezed == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as int?,
+      seaLevel: freezed == seaLevel
+          ? _value.seaLevel
+          : seaLevel // ignore: cast_nullable_to_non_nullable
+              as int?,
+      grndLevel: freezed == grndLevel
+          ? _value.grndLevel
+          : grndLevel // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MainImpl implements _Main {
+  const _$MainImpl(
+      {this.temp,
+      this.feelsLike,
+      this.tempMin,
+      this.tempMax,
+      this.pressure,
+      this.humidity,
+      this.seaLevel,
+      this.grndLevel});
+
+  factory _$MainImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MainImplFromJson(json);
+
+  @override
+  final double? temp;
+  @override
+  final double? feelsLike;
+  @override
+  final double? tempMin;
+  @override
+  final double? tempMax;
+  @override
+  final int? pressure;
+  @override
+  final int? humidity;
+  @override
+  final int? seaLevel;
+  @override
+  final int? grndLevel;
+
+  @override
+  String toString() {
+    return 'Main(temp: $temp, feelsLike: $feelsLike, tempMin: $tempMin, tempMax: $tempMax, pressure: $pressure, humidity: $humidity, seaLevel: $seaLevel, grndLevel: $grndLevel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MainImpl &&
+            (identical(other.temp, temp) || other.temp == temp) &&
+            (identical(other.feelsLike, feelsLike) ||
+                other.feelsLike == feelsLike) &&
+            (identical(other.tempMin, tempMin) || other.tempMin == tempMin) &&
+            (identical(other.tempMax, tempMax) || other.tempMax == tempMax) &&
+            (identical(other.pressure, pressure) ||
+                other.pressure == pressure) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
+            (identical(other.seaLevel, seaLevel) ||
+                other.seaLevel == seaLevel) &&
+            (identical(other.grndLevel, grndLevel) ||
+                other.grndLevel == grndLevel));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, temp, feelsLike, tempMin,
+      tempMax, pressure, humidity, seaLevel, grndLevel);
+
+  /// Create a copy of Main
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MainImplCopyWith<_$MainImpl> get copyWith =>
+      __$$MainImplCopyWithImpl<_$MainImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MainImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Main implements Main {
+  const factory _Main(
+      {final double? temp,
+      final double? feelsLike,
+      final double? tempMin,
+      final double? tempMax,
+      final int? pressure,
+      final int? humidity,
+      final int? seaLevel,
+      final int? grndLevel}) = _$MainImpl;
+
+  factory _Main.fromJson(Map<String, dynamic> json) = _$MainImpl.fromJson;
+
+  @override
+  double? get temp;
+  @override
+  double? get feelsLike;
+  @override
+  double? get tempMin;
+  @override
+  double? get tempMax;
+  @override
+  int? get pressure;
+  @override
+  int? get humidity;
+  @override
+  int? get seaLevel;
+  @override
+  int? get grndLevel;
+
+  /// Create a copy of Main
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MainImplCopyWith<_$MainImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Wind _$WindFromJson(Map<String, dynamic> json) {
+  return _Wind.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Wind {
+  double? get speed => throw _privateConstructorUsedError;
+  int? get deg => throw _privateConstructorUsedError;
+  double? get gust => throw _privateConstructorUsedError;
+
+  /// Serializes this Wind to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Wind
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $WindCopyWith<Wind> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $WindCopyWith<$Res> {
+  factory $WindCopyWith(Wind value, $Res Function(Wind) then) =
+      _$WindCopyWithImpl<$Res, Wind>;
+  @useResult
+  $Res call({double? speed, int? deg, double? gust});
+}
+
+/// @nodoc
+class _$WindCopyWithImpl<$Res, $Val extends Wind>
+    implements $WindCopyWith<$Res> {
+  _$WindCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Wind
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? speed = freezed,
+    Object? deg = freezed,
+    Object? gust = freezed,
+  }) {
+    return _then(_value.copyWith(
+      speed: freezed == speed
+          ? _value.speed
+          : speed // ignore: cast_nullable_to_non_nullable
+              as double?,
+      deg: freezed == deg
+          ? _value.deg
+          : deg // ignore: cast_nullable_to_non_nullable
+              as int?,
+      gust: freezed == gust
+          ? _value.gust
+          : gust // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$WindImplCopyWith<$Res> implements $WindCopyWith<$Res> {
+  factory _$$WindImplCopyWith(
+          _$WindImpl value, $Res Function(_$WindImpl) then) =
+      __$$WindImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? speed, int? deg, double? gust});
+}
+
+/// @nodoc
+class __$$WindImplCopyWithImpl<$Res>
+    extends _$WindCopyWithImpl<$Res, _$WindImpl>
+    implements _$$WindImplCopyWith<$Res> {
+  __$$WindImplCopyWithImpl(_$WindImpl _value, $Res Function(_$WindImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Wind
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? speed = freezed,
+    Object? deg = freezed,
+    Object? gust = freezed,
+  }) {
+    return _then(_$WindImpl(
+      speed: freezed == speed
+          ? _value.speed
+          : speed // ignore: cast_nullable_to_non_nullable
+              as double?,
+      deg: freezed == deg
+          ? _value.deg
+          : deg // ignore: cast_nullable_to_non_nullable
+              as int?,
+      gust: freezed == gust
+          ? _value.gust
+          : gust // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$WindImpl implements _Wind {
+  const _$WindImpl({this.speed, this.deg, this.gust});
+
+  factory _$WindImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WindImplFromJson(json);
+
+  @override
+  final double? speed;
+  @override
+  final int? deg;
+  @override
+  final double? gust;
+
+  @override
+  String toString() {
+    return 'Wind(speed: $speed, deg: $deg, gust: $gust)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WindImpl &&
+            (identical(other.speed, speed) || other.speed == speed) &&
+            (identical(other.deg, deg) || other.deg == deg) &&
+            (identical(other.gust, gust) || other.gust == gust));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, speed, deg, gust);
+
+  /// Create a copy of Wind
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WindImplCopyWith<_$WindImpl> get copyWith =>
+      __$$WindImplCopyWithImpl<_$WindImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WindImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Wind implements Wind {
+  const factory _Wind(
+      {final double? speed, final int? deg, final double? gust}) = _$WindImpl;
+
+  factory _Wind.fromJson(Map<String, dynamic> json) = _$WindImpl.fromJson;
+
+  @override
+  double? get speed;
+  @override
+  int? get deg;
+  @override
+  double? get gust;
+
+  /// Create a copy of Wind
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$WindImplCopyWith<_$WindImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Clouds _$CloudsFromJson(Map<String, dynamic> json) {
+  return _Clouds.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Clouds {
+  int? get all => throw _privateConstructorUsedError;
+
+  /// Serializes this Clouds to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Clouds
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CloudsCopyWith<Clouds> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CloudsCopyWith<$Res> {
+  factory $CloudsCopyWith(Clouds value, $Res Function(Clouds) then) =
+      _$CloudsCopyWithImpl<$Res, Clouds>;
+  @useResult
+  $Res call({int? all});
+}
+
+/// @nodoc
+class _$CloudsCopyWithImpl<$Res, $Val extends Clouds>
+    implements $CloudsCopyWith<$Res> {
+  _$CloudsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Clouds
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? all = freezed,
+  }) {
+    return _then(_value.copyWith(
+      all: freezed == all
+          ? _value.all
+          : all // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CloudsImplCopyWith<$Res> implements $CloudsCopyWith<$Res> {
+  factory _$$CloudsImplCopyWith(
+          _$CloudsImpl value, $Res Function(_$CloudsImpl) then) =
+      __$$CloudsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? all});
+}
+
+/// @nodoc
+class __$$CloudsImplCopyWithImpl<$Res>
+    extends _$CloudsCopyWithImpl<$Res, _$CloudsImpl>
+    implements _$$CloudsImplCopyWith<$Res> {
+  __$$CloudsImplCopyWithImpl(
+      _$CloudsImpl _value, $Res Function(_$CloudsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Clouds
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? all = freezed,
+  }) {
+    return _then(_$CloudsImpl(
+      all: freezed == all
+          ? _value.all
+          : all // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CloudsImpl implements _Clouds {
+  const _$CloudsImpl({this.all});
+
+  factory _$CloudsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CloudsImplFromJson(json);
+
+  @override
+  final int? all;
+
+  @override
+  String toString() {
+    return 'Clouds(all: $all)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CloudsImpl &&
+            (identical(other.all, all) || other.all == all));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, all);
+
+  /// Create a copy of Clouds
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CloudsImplCopyWith<_$CloudsImpl> get copyWith =>
+      __$$CloudsImplCopyWithImpl<_$CloudsImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CloudsImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Clouds implements Clouds {
+  const factory _Clouds({final int? all}) = _$CloudsImpl;
+
+  factory _Clouds.fromJson(Map<String, dynamic> json) = _$CloudsImpl.fromJson;
+
+  @override
+  int? get all;
+
+  /// Create a copy of Clouds
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CloudsImplCopyWith<_$CloudsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Sys _$SysFromJson(Map<String, dynamic> json) {
+  return _Sys.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Sys {
+  int? get type => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  String? get country => throw _privateConstructorUsedError;
+  int? get sunrise => throw _privateConstructorUsedError;
+  int? get sunset => throw _privateConstructorUsedError;
+
+  /// Serializes this Sys to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $SysCopyWith<Sys> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SysCopyWith<$Res> {
+  factory $SysCopyWith(Sys value, $Res Function(Sys) then) =
+      _$SysCopyWithImpl<$Res, Sys>;
+  @useResult
+  $Res call({int? type, int? id, String? country, int? sunrise, int? sunset});
+}
+
+/// @nodoc
+class _$SysCopyWithImpl<$Res, $Val extends Sys> implements $SysCopyWith<$Res> {
+  _$SysCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? country = freezed,
+    Object? sunrise = freezed,
+    Object? sunset = freezed,
+  }) {
+    return _then(_value.copyWith(
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      country: freezed == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sunrise: freezed == sunrise
+          ? _value.sunrise
+          : sunrise // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sunset: freezed == sunset
+          ? _value.sunset
+          : sunset // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$SysImplCopyWith<$Res> implements $SysCopyWith<$Res> {
+  factory _$$SysImplCopyWith(_$SysImpl value, $Res Function(_$SysImpl) then) =
+      __$$SysImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? type, int? id, String? country, int? sunrise, int? sunset});
+}
+
+/// @nodoc
+class __$$SysImplCopyWithImpl<$Res> extends _$SysCopyWithImpl<$Res, _$SysImpl>
+    implements _$$SysImplCopyWith<$Res> {
+  __$$SysImplCopyWithImpl(_$SysImpl _value, $Res Function(_$SysImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Sys
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? country = freezed,
+    Object? sunrise = freezed,
+    Object? sunset = freezed,
+  }) {
+    return _then(_$SysImpl(
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      country: freezed == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sunrise: freezed == sunrise
+          ? _value.sunrise
+          : sunrise // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sunset: freezed == sunset
+          ? _value.sunset
+          : sunset // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SysImpl implements _Sys {
+  const _$SysImpl(
+      {this.type, this.id, this.country, this.sunrise, this.sunset});
+
+  factory _$SysImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SysImplFromJson(json);
+
+  @override
+  final int? type;
+  @override
+  final int? id;
+  @override
+  final String? country;
+  @override
+  final int? sunrise;
+  @override
+  final int? sunset;
+
+  @override
+  String toString() {
+    return 'Sys(type: $type, id: $id, country: $country, sunrise: $sunrise, sunset: $sunset)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SysImpl &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.country, country) || other.country == country) &&
+            (identical(other.sunrise, sunrise) || other.sunrise == sunrise) &&
+            (identical(other.sunset, sunset) || other.sunset == sunset));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, sourcename, attribution, license, url);
+      Object.hash(runtimeType, type, id, country, sunrise, sunset);
 
-  /// Create a copy of Datasource
+  /// Create a copy of Sys
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DatasourceImplCopyWith<_$DatasourceImpl> get copyWith =>
-      __$$DatasourceImplCopyWithImpl<_$DatasourceImpl>(this, _$identity);
+  _$$SysImplCopyWith<_$SysImpl> get copyWith =>
+      __$$SysImplCopyWithImpl<_$SysImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DatasourceImplToJson(
+    return _$$SysImplToJson(
       this,
     );
   }
 }
 
-abstract class _Datasource implements Datasource {
-  const factory _Datasource(
-      {final String? sourcename,
-      final String? attribution,
-      final String? license,
-      final String? url}) = _$DatasourceImpl;
+abstract class _Sys implements Sys {
+  const factory _Sys(
+      {final int? type,
+      final int? id,
+      final String? country,
+      final int? sunrise,
+      final int? sunset}) = _$SysImpl;
 
-  factory _Datasource.fromJson(Map<String, dynamic> json) =
-      _$DatasourceImpl.fromJson;
+  factory _Sys.fromJson(Map<String, dynamic> json) = _$SysImpl.fromJson;
 
   @override
-  String? get sourcename;
+  int? get type;
   @override
-  String? get attribution;
+  int? get id;
   @override
-  String? get license;
+  String? get country;
   @override
-  String? get url;
+  int? get sunrise;
+  @override
+  int? get sunset;
 
-  /// Create a copy of Datasource
+  /// Create a copy of Sys
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DatasourceImplCopyWith<_$DatasourceImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Timezone _$TimezoneFromJson(Map<String, dynamic> json) {
-  return _Timezone.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Timezone {
-  String? get name => throw _privateConstructorUsedError;
-  String? get offsetSTD => throw _privateConstructorUsedError;
-  int? get offsetSTDSeconds => throw _privateConstructorUsedError;
-  String? get offsetDST => throw _privateConstructorUsedError;
-  int? get offsetDSTSeconds => throw _privateConstructorUsedError;
-  String? get abbreviationSTD => throw _privateConstructorUsedError;
-  String? get abbreviationDST => throw _privateConstructorUsedError;
-
-  /// Serializes this Timezone to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Timezone
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $TimezoneCopyWith<Timezone> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TimezoneCopyWith<$Res> {
-  factory $TimezoneCopyWith(Timezone value, $Res Function(Timezone) then) =
-      _$TimezoneCopyWithImpl<$Res, Timezone>;
-  @useResult
-  $Res call(
-      {String? name,
-      String? offsetSTD,
-      int? offsetSTDSeconds,
-      String? offsetDST,
-      int? offsetDSTSeconds,
-      String? abbreviationSTD,
-      String? abbreviationDST});
-}
-
-/// @nodoc
-class _$TimezoneCopyWithImpl<$Res, $Val extends Timezone>
-    implements $TimezoneCopyWith<$Res> {
-  _$TimezoneCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Timezone
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? offsetSTD = freezed,
-    Object? offsetSTDSeconds = freezed,
-    Object? offsetDST = freezed,
-    Object? offsetDSTSeconds = freezed,
-    Object? abbreviationSTD = freezed,
-    Object? abbreviationDST = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offsetSTD: freezed == offsetSTD
-          ? _value.offsetSTD
-          : offsetSTD // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offsetSTDSeconds: freezed == offsetSTDSeconds
-          ? _value.offsetSTDSeconds
-          : offsetSTDSeconds // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offsetDST: freezed == offsetDST
-          ? _value.offsetDST
-          : offsetDST // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offsetDSTSeconds: freezed == offsetDSTSeconds
-          ? _value.offsetDSTSeconds
-          : offsetDSTSeconds // ignore: cast_nullable_to_non_nullable
-              as int?,
-      abbreviationSTD: freezed == abbreviationSTD
-          ? _value.abbreviationSTD
-          : abbreviationSTD // ignore: cast_nullable_to_non_nullable
-              as String?,
-      abbreviationDST: freezed == abbreviationDST
-          ? _value.abbreviationDST
-          : abbreviationDST // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$TimezoneImplCopyWith<$Res>
-    implements $TimezoneCopyWith<$Res> {
-  factory _$$TimezoneImplCopyWith(
-          _$TimezoneImpl value, $Res Function(_$TimezoneImpl) then) =
-      __$$TimezoneImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? name,
-      String? offsetSTD,
-      int? offsetSTDSeconds,
-      String? offsetDST,
-      int? offsetDSTSeconds,
-      String? abbreviationSTD,
-      String? abbreviationDST});
-}
-
-/// @nodoc
-class __$$TimezoneImplCopyWithImpl<$Res>
-    extends _$TimezoneCopyWithImpl<$Res, _$TimezoneImpl>
-    implements _$$TimezoneImplCopyWith<$Res> {
-  __$$TimezoneImplCopyWithImpl(
-      _$TimezoneImpl _value, $Res Function(_$TimezoneImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Timezone
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? offsetSTD = freezed,
-    Object? offsetSTDSeconds = freezed,
-    Object? offsetDST = freezed,
-    Object? offsetDSTSeconds = freezed,
-    Object? abbreviationSTD = freezed,
-    Object? abbreviationDST = freezed,
-  }) {
-    return _then(_$TimezoneImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offsetSTD: freezed == offsetSTD
-          ? _value.offsetSTD
-          : offsetSTD // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offsetSTDSeconds: freezed == offsetSTDSeconds
-          ? _value.offsetSTDSeconds
-          : offsetSTDSeconds // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offsetDST: freezed == offsetDST
-          ? _value.offsetDST
-          : offsetDST // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offsetDSTSeconds: freezed == offsetDSTSeconds
-          ? _value.offsetDSTSeconds
-          : offsetDSTSeconds // ignore: cast_nullable_to_non_nullable
-              as int?,
-      abbreviationSTD: freezed == abbreviationSTD
-          ? _value.abbreviationSTD
-          : abbreviationSTD // ignore: cast_nullable_to_non_nullable
-              as String?,
-      abbreviationDST: freezed == abbreviationDST
-          ? _value.abbreviationDST
-          : abbreviationDST // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$TimezoneImpl implements _Timezone {
-  const _$TimezoneImpl(
-      {this.name,
-      this.offsetSTD,
-      this.offsetSTDSeconds,
-      this.offsetDST,
-      this.offsetDSTSeconds,
-      this.abbreviationSTD,
-      this.abbreviationDST});
-
-  factory _$TimezoneImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TimezoneImplFromJson(json);
-
-  @override
-  final String? name;
-  @override
-  final String? offsetSTD;
-  @override
-  final int? offsetSTDSeconds;
-  @override
-  final String? offsetDST;
-  @override
-  final int? offsetDSTSeconds;
-  @override
-  final String? abbreviationSTD;
-  @override
-  final String? abbreviationDST;
-
-  @override
-  String toString() {
-    return 'Timezone(name: $name, offsetSTD: $offsetSTD, offsetSTDSeconds: $offsetSTDSeconds, offsetDST: $offsetDST, offsetDSTSeconds: $offsetDSTSeconds, abbreviationSTD: $abbreviationSTD, abbreviationDST: $abbreviationDST)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TimezoneImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.offsetSTD, offsetSTD) ||
-                other.offsetSTD == offsetSTD) &&
-            (identical(other.offsetSTDSeconds, offsetSTDSeconds) ||
-                other.offsetSTDSeconds == offsetSTDSeconds) &&
-            (identical(other.offsetDST, offsetDST) ||
-                other.offsetDST == offsetDST) &&
-            (identical(other.offsetDSTSeconds, offsetDSTSeconds) ||
-                other.offsetDSTSeconds == offsetDSTSeconds) &&
-            (identical(other.abbreviationSTD, abbreviationSTD) ||
-                other.abbreviationSTD == abbreviationSTD) &&
-            (identical(other.abbreviationDST, abbreviationDST) ||
-                other.abbreviationDST == abbreviationDST));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      name,
-      offsetSTD,
-      offsetSTDSeconds,
-      offsetDST,
-      offsetDSTSeconds,
-      abbreviationSTD,
-      abbreviationDST);
-
-  /// Create a copy of Timezone
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TimezoneImplCopyWith<_$TimezoneImpl> get copyWith =>
-      __$$TimezoneImplCopyWithImpl<_$TimezoneImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TimezoneImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Timezone implements Timezone {
-  const factory _Timezone(
-      {final String? name,
-      final String? offsetSTD,
-      final int? offsetSTDSeconds,
-      final String? offsetDST,
-      final int? offsetDSTSeconds,
-      final String? abbreviationSTD,
-      final String? abbreviationDST}) = _$TimezoneImpl;
-
-  factory _Timezone.fromJson(Map<String, dynamic> json) =
-      _$TimezoneImpl.fromJson;
-
-  @override
-  String? get name;
-  @override
-  String? get offsetSTD;
-  @override
-  int? get offsetSTDSeconds;
-  @override
-  String? get offsetDST;
-  @override
-  int? get offsetDSTSeconds;
-  @override
-  String? get abbreviationSTD;
-  @override
-  String? get abbreviationDST;
-
-  /// Create a copy of Timezone
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TimezoneImplCopyWith<_$TimezoneImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Rank _$RankFromJson(Map<String, dynamic> json) {
-  return _Rank.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Rank {
-  double? get importance => throw _privateConstructorUsedError;
-  int? get confidence => throw _privateConstructorUsedError;
-  int? get confidenceCityLevel => throw _privateConstructorUsedError;
-  String? get matchType => throw _privateConstructorUsedError;
-
-  /// Serializes this Rank to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Rank
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RankCopyWith<Rank> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RankCopyWith<$Res> {
-  factory $RankCopyWith(Rank value, $Res Function(Rank) then) =
-      _$RankCopyWithImpl<$Res, Rank>;
-  @useResult
-  $Res call(
-      {double? importance,
-      int? confidence,
-      int? confidenceCityLevel,
-      String? matchType});
-}
-
-/// @nodoc
-class _$RankCopyWithImpl<$Res, $Val extends Rank>
-    implements $RankCopyWith<$Res> {
-  _$RankCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Rank
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? importance = freezed,
-    Object? confidence = freezed,
-    Object? confidenceCityLevel = freezed,
-    Object? matchType = freezed,
-  }) {
-    return _then(_value.copyWith(
-      importance: freezed == importance
-          ? _value.importance
-          : importance // ignore: cast_nullable_to_non_nullable
-              as double?,
-      confidence: freezed == confidence
-          ? _value.confidence
-          : confidence // ignore: cast_nullable_to_non_nullable
-              as int?,
-      confidenceCityLevel: freezed == confidenceCityLevel
-          ? _value.confidenceCityLevel
-          : confidenceCityLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
-      matchType: freezed == matchType
-          ? _value.matchType
-          : matchType // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$RankImplCopyWith<$Res> implements $RankCopyWith<$Res> {
-  factory _$$RankImplCopyWith(
-          _$RankImpl value, $Res Function(_$RankImpl) then) =
-      __$$RankImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {double? importance,
-      int? confidence,
-      int? confidenceCityLevel,
-      String? matchType});
-}
-
-/// @nodoc
-class __$$RankImplCopyWithImpl<$Res>
-    extends _$RankCopyWithImpl<$Res, _$RankImpl>
-    implements _$$RankImplCopyWith<$Res> {
-  __$$RankImplCopyWithImpl(_$RankImpl _value, $Res Function(_$RankImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Rank
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? importance = freezed,
-    Object? confidence = freezed,
-    Object? confidenceCityLevel = freezed,
-    Object? matchType = freezed,
-  }) {
-    return _then(_$RankImpl(
-      importance: freezed == importance
-          ? _value.importance
-          : importance // ignore: cast_nullable_to_non_nullable
-              as double?,
-      confidence: freezed == confidence
-          ? _value.confidence
-          : confidence // ignore: cast_nullable_to_non_nullable
-              as int?,
-      confidenceCityLevel: freezed == confidenceCityLevel
-          ? _value.confidenceCityLevel
-          : confidenceCityLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
-      matchType: freezed == matchType
-          ? _value.matchType
-          : matchType // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$RankImpl implements _Rank {
-  const _$RankImpl(
-      {this.importance,
-      this.confidence,
-      this.confidenceCityLevel,
-      this.matchType});
-
-  factory _$RankImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RankImplFromJson(json);
-
-  @override
-  final double? importance;
-  @override
-  final int? confidence;
-  @override
-  final int? confidenceCityLevel;
-  @override
-  final String? matchType;
-
-  @override
-  String toString() {
-    return 'Rank(importance: $importance, confidence: $confidence, confidenceCityLevel: $confidenceCityLevel, matchType: $matchType)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RankImpl &&
-            (identical(other.importance, importance) ||
-                other.importance == importance) &&
-            (identical(other.confidence, confidence) ||
-                other.confidence == confidence) &&
-            (identical(other.confidenceCityLevel, confidenceCityLevel) ||
-                other.confidenceCityLevel == confidenceCityLevel) &&
-            (identical(other.matchType, matchType) ||
-                other.matchType == matchType));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, importance, confidence, confidenceCityLevel, matchType);
-
-  /// Create a copy of Rank
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RankImplCopyWith<_$RankImpl> get copyWith =>
-      __$$RankImplCopyWithImpl<_$RankImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RankImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Rank implements Rank {
-  const factory _Rank(
-      {final double? importance,
-      final int? confidence,
-      final int? confidenceCityLevel,
-      final String? matchType}) = _$RankImpl;
-
-  factory _Rank.fromJson(Map<String, dynamic> json) = _$RankImpl.fromJson;
-
-  @override
-  double? get importance;
-  @override
-  int? get confidence;
-  @override
-  int? get confidenceCityLevel;
-  @override
-  String? get matchType;
-
-  /// Create a copy of Rank
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RankImplCopyWith<_$RankImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Bbox _$BboxFromJson(Map<String, dynamic> json) {
-  return _Bbox.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Bbox {
-  double? get lon1 => throw _privateConstructorUsedError;
-  double? get lat1 => throw _privateConstructorUsedError;
-  double? get lon2 => throw _privateConstructorUsedError;
-  double? get lat2 => throw _privateConstructorUsedError;
-
-  /// Serializes this Bbox to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Bbox
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $BboxCopyWith<Bbox> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $BboxCopyWith<$Res> {
-  factory $BboxCopyWith(Bbox value, $Res Function(Bbox) then) =
-      _$BboxCopyWithImpl<$Res, Bbox>;
-  @useResult
-  $Res call({double? lon1, double? lat1, double? lon2, double? lat2});
-}
-
-/// @nodoc
-class _$BboxCopyWithImpl<$Res, $Val extends Bbox>
-    implements $BboxCopyWith<$Res> {
-  _$BboxCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Bbox
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? lon1 = freezed,
-    Object? lat1 = freezed,
-    Object? lon2 = freezed,
-    Object? lat2 = freezed,
-  }) {
-    return _then(_value.copyWith(
-      lon1: freezed == lon1
-          ? _value.lon1
-          : lon1 // ignore: cast_nullable_to_non_nullable
-              as double?,
-      lat1: freezed == lat1
-          ? _value.lat1
-          : lat1 // ignore: cast_nullable_to_non_nullable
-              as double?,
-      lon2: freezed == lon2
-          ? _value.lon2
-          : lon2 // ignore: cast_nullable_to_non_nullable
-              as double?,
-      lat2: freezed == lat2
-          ? _value.lat2
-          : lat2 // ignore: cast_nullable_to_non_nullable
-              as double?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$BboxImplCopyWith<$Res> implements $BboxCopyWith<$Res> {
-  factory _$$BboxImplCopyWith(
-          _$BboxImpl value, $Res Function(_$BboxImpl) then) =
-      __$$BboxImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double? lon1, double? lat1, double? lon2, double? lat2});
-}
-
-/// @nodoc
-class __$$BboxImplCopyWithImpl<$Res>
-    extends _$BboxCopyWithImpl<$Res, _$BboxImpl>
-    implements _$$BboxImplCopyWith<$Res> {
-  __$$BboxImplCopyWithImpl(_$BboxImpl _value, $Res Function(_$BboxImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Bbox
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? lon1 = freezed,
-    Object? lat1 = freezed,
-    Object? lon2 = freezed,
-    Object? lat2 = freezed,
-  }) {
-    return _then(_$BboxImpl(
-      lon1: freezed == lon1
-          ? _value.lon1
-          : lon1 // ignore: cast_nullable_to_non_nullable
-              as double?,
-      lat1: freezed == lat1
-          ? _value.lat1
-          : lat1 // ignore: cast_nullable_to_non_nullable
-              as double?,
-      lon2: freezed == lon2
-          ? _value.lon2
-          : lon2 // ignore: cast_nullable_to_non_nullable
-              as double?,
-      lat2: freezed == lat2
-          ? _value.lat2
-          : lat2 // ignore: cast_nullable_to_non_nullable
-              as double?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$BboxImpl implements _Bbox {
-  const _$BboxImpl({this.lon1, this.lat1, this.lon2, this.lat2});
-
-  factory _$BboxImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BboxImplFromJson(json);
-
-  @override
-  final double? lon1;
-  @override
-  final double? lat1;
-  @override
-  final double? lon2;
-  @override
-  final double? lat2;
-
-  @override
-  String toString() {
-    return 'Bbox(lon1: $lon1, lat1: $lat1, lon2: $lon2, lat2: $lat2)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BboxImpl &&
-            (identical(other.lon1, lon1) || other.lon1 == lon1) &&
-            (identical(other.lat1, lat1) || other.lat1 == lat1) &&
-            (identical(other.lon2, lon2) || other.lon2 == lon2) &&
-            (identical(other.lat2, lat2) || other.lat2 == lat2));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, lon1, lat1, lon2, lat2);
-
-  /// Create a copy of Bbox
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$BboxImplCopyWith<_$BboxImpl> get copyWith =>
-      __$$BboxImplCopyWithImpl<_$BboxImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$BboxImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Bbox implements Bbox {
-  const factory _Bbox(
-      {final double? lon1,
-      final double? lat1,
-      final double? lon2,
-      final double? lat2}) = _$BboxImpl;
-
-  factory _Bbox.fromJson(Map<String, dynamic> json) = _$BboxImpl.fromJson;
-
-  @override
-  double? get lon1;
-  @override
-  double? get lat1;
-  @override
-  double? get lon2;
-  @override
-  double? get lat2;
-
-  /// Create a copy of Bbox
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BboxImplCopyWith<_$BboxImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Query _$QueryFromJson(Map<String, dynamic> json) {
-  return _Query.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Query {
-  String? get text => throw _privateConstructorUsedError;
-  Parsed? get parsed => throw _privateConstructorUsedError;
-
-  /// Serializes this Query to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Query
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $QueryCopyWith<Query> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $QueryCopyWith<$Res> {
-  factory $QueryCopyWith(Query value, $Res Function(Query) then) =
-      _$QueryCopyWithImpl<$Res, Query>;
-  @useResult
-  $Res call({String? text, Parsed? parsed});
-
-  $ParsedCopyWith<$Res>? get parsed;
-}
-
-/// @nodoc
-class _$QueryCopyWithImpl<$Res, $Val extends Query>
-    implements $QueryCopyWith<$Res> {
-  _$QueryCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Query
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? text = freezed,
-    Object? parsed = freezed,
-  }) {
-    return _then(_value.copyWith(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      parsed: freezed == parsed
-          ? _value.parsed
-          : parsed // ignore: cast_nullable_to_non_nullable
-              as Parsed?,
-    ) as $Val);
-  }
-
-  /// Create a copy of Query
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $ParsedCopyWith<$Res>? get parsed {
-    if (_value.parsed == null) {
-      return null;
-    }
-
-    return $ParsedCopyWith<$Res>(_value.parsed!, (value) {
-      return _then(_value.copyWith(parsed: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$QueryImplCopyWith<$Res> implements $QueryCopyWith<$Res> {
-  factory _$$QueryImplCopyWith(
-          _$QueryImpl value, $Res Function(_$QueryImpl) then) =
-      __$$QueryImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? text, Parsed? parsed});
-
-  @override
-  $ParsedCopyWith<$Res>? get parsed;
-}
-
-/// @nodoc
-class __$$QueryImplCopyWithImpl<$Res>
-    extends _$QueryCopyWithImpl<$Res, _$QueryImpl>
-    implements _$$QueryImplCopyWith<$Res> {
-  __$$QueryImplCopyWithImpl(
-      _$QueryImpl _value, $Res Function(_$QueryImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Query
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? text = freezed,
-    Object? parsed = freezed,
-  }) {
-    return _then(_$QueryImpl(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      parsed: freezed == parsed
-          ? _value.parsed
-          : parsed // ignore: cast_nullable_to_non_nullable
-              as Parsed?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$QueryImpl implements _Query {
-  const _$QueryImpl({this.text, this.parsed});
-
-  factory _$QueryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$QueryImplFromJson(json);
-
-  @override
-  final String? text;
-  @override
-  final Parsed? parsed;
-
-  @override
-  String toString() {
-    return 'Query(text: $text, parsed: $parsed)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$QueryImpl &&
-            (identical(other.text, text) || other.text == text) &&
-            (identical(other.parsed, parsed) || other.parsed == parsed));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, text, parsed);
-
-  /// Create a copy of Query
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$QueryImplCopyWith<_$QueryImpl> get copyWith =>
-      __$$QueryImplCopyWithImpl<_$QueryImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$QueryImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Query implements Query {
-  const factory _Query({final String? text, final Parsed? parsed}) =
-      _$QueryImpl;
-
-  factory _Query.fromJson(Map<String, dynamic> json) = _$QueryImpl.fromJson;
-
-  @override
-  String? get text;
-  @override
-  Parsed? get parsed;
-
-  /// Create a copy of Query
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$QueryImplCopyWith<_$QueryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Parsed _$ParsedFromJson(Map<String, dynamic> json) {
-  return _Parsed.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Parsed {
-  String? get city => throw _privateConstructorUsedError;
-  String? get expectedType => throw _privateConstructorUsedError;
-
-  /// Serializes this Parsed to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Parsed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ParsedCopyWith<Parsed> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ParsedCopyWith<$Res> {
-  factory $ParsedCopyWith(Parsed value, $Res Function(Parsed) then) =
-      _$ParsedCopyWithImpl<$Res, Parsed>;
-  @useResult
-  $Res call({String? city, String? expectedType});
-}
-
-/// @nodoc
-class _$ParsedCopyWithImpl<$Res, $Val extends Parsed>
-    implements $ParsedCopyWith<$Res> {
-  _$ParsedCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Parsed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? city = freezed,
-    Object? expectedType = freezed,
-  }) {
-    return _then(_value.copyWith(
-      city: freezed == city
-          ? _value.city
-          : city // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expectedType: freezed == expectedType
-          ? _value.expectedType
-          : expectedType // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$ParsedImplCopyWith<$Res> implements $ParsedCopyWith<$Res> {
-  factory _$$ParsedImplCopyWith(
-          _$ParsedImpl value, $Res Function(_$ParsedImpl) then) =
-      __$$ParsedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? city, String? expectedType});
-}
-
-/// @nodoc
-class __$$ParsedImplCopyWithImpl<$Res>
-    extends _$ParsedCopyWithImpl<$Res, _$ParsedImpl>
-    implements _$$ParsedImplCopyWith<$Res> {
-  __$$ParsedImplCopyWithImpl(
-      _$ParsedImpl _value, $Res Function(_$ParsedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Parsed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? city = freezed,
-    Object? expectedType = freezed,
-  }) {
-    return _then(_$ParsedImpl(
-      city: freezed == city
-          ? _value.city
-          : city // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expectedType: freezed == expectedType
-          ? _value.expectedType
-          : expectedType // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$ParsedImpl implements _Parsed {
-  const _$ParsedImpl({this.city, this.expectedType});
-
-  factory _$ParsedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ParsedImplFromJson(json);
-
-  @override
-  final String? city;
-  @override
-  final String? expectedType;
-
-  @override
-  String toString() {
-    return 'Parsed(city: $city, expectedType: $expectedType)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ParsedImpl &&
-            (identical(other.city, city) || other.city == city) &&
-            (identical(other.expectedType, expectedType) ||
-                other.expectedType == expectedType));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, city, expectedType);
-
-  /// Create a copy of Parsed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ParsedImplCopyWith<_$ParsedImpl> get copyWith =>
-      __$$ParsedImplCopyWithImpl<_$ParsedImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ParsedImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Parsed implements Parsed {
-  const factory _Parsed({final String? city, final String? expectedType}) =
-      _$ParsedImpl;
-
-  factory _Parsed.fromJson(Map<String, dynamic> json) = _$ParsedImpl.fromJson;
-
-  @override
-  String? get city;
-  @override
-  String? get expectedType;
-
-  /// Create a copy of Parsed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ParsedImplCopyWith<_$ParsedImpl> get copyWith =>
+  _$$SysImplCopyWith<_$SysImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
